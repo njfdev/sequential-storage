@@ -375,7 +375,7 @@ impl PageState {
 
 /// The main error type
 #[non_exhaustive]
-#[derive(Debug)]
+#[derive(Copy, Clone, Debug)]
 #[cfg_attr(feature = "defmt-03", derive(defmt::Format))]
 pub enum Error<S> {
     /// An error in the storage (flash)
